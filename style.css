@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+::selection {
+    color: #fff;
+    background: #13151550;
+}
+
+::-webkit-scrollbar{
+    width: 6px;
+}
+
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 10px #13151520;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #FF101F;
+    transition: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit';
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: #F5FAEF;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+nav {
+    position: sticky;
+    width: 100%;
+    padding: 6px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F5FAEF;
+    border-bottom: #13151520 solid 1px;
+    z-index: 9999;
+}
+
+nav h1 {
+    font-family: 'Source Code Pro';
+    color: #131515;
+    font-size: 2.4rem;
+}
+
+nav #menu {
+    display: none; 
+    cursor: pointer;
+}
+
+nav ul {
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul li {
+    transition: all 0.2s ease-in-out;
+}
+
+nav ul li a {
+    font-family: 'Source Code Pro';
+    color: #131515;
+}
+
+nav ul li:hover {
+    translate: -2px -2px;
+}
+
+nav ul li:active {
+    translate: 2px 2px;
+}
+
+#support {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #FF101F;
+    padding: 12px 24px;
+}
+
+#support p {
+    font-family: 'Source Code Pro';
+    color: #F5FAEF;
+}
+
+#support p a {
+    font-family: 'Source Code Pro';
+    color: #F5FAEF;
+    font-weight: 600;
+}
+
+#support #closeSupp {
+    background: none;
+    border: none;
+    color: #F5FAEF;
+    margin-left: 24px;
+}
+
+#support #closeSupp:hover {
+    cursor: pointer;
+}
+
+#home {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 60px;
+}
+
+#home .pres {
+    width: 60%;
+}
+
+#home .pres section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+}
+
+#home .pres section h2 {
+    font-family: 'Source Code Pro';
+    color: #FF101F;
+    font-size: clamp(4rem, calc(3rem + 3vw), 10rem);
+    margin-bottom: -12px;
+}
+
+#home .pres section span {
+    font-family: 'Source Code Pro';
+    font-size: 1.2rem;
+    padding: 12px 24px;
+    color: #131515;
+    border: #131515 2px solid;
+}
+
+#home .pres .container {
+    margin-bottom: 24px;
+}
+
+#home .pres .reco {
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 24px;
+    align-items: center;
+    border-bottom: #13151520 solid 2px;
+}
+
+#home .pres .reco > span {
+    font-family: 'Source Code Pro';
+    color: #131515;
+    width: 5%;
+}
+
+#home .pres .reco .title {
+    color: #131515;
+    display: flex;
+    align-items: center;
+    width: 60%;
+    justify-content: flex-start;
+}
+
+#home .pres .reco .title img {
+    width: 60px;
+    margin-right: 24px;
+}
+
+#home .pres .reco .title p {
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-right: 6px;
+}
+
+#home .pres .reco .title span {
+    font-family: 'Source Code Pro';
+    text-transform: uppercase;
+    color: #13151580;
+    font-size: 0.8rem;
+}
+
+#home .pres .reco .artist {
+    color: #131515;
+    width: 20%;
+}
+
+#home .pres .reco a {
+    width: 5%;
+    text-align: right;
+    color: #131515;
+}
+
+#home .pres .more {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#home .pres .more a {
+    text-transform: uppercase;
+    font-family: 'Source Code Pro';
+    text-decoration: none;
+    background-color: #FF101F;
+    border: #FF101F solid 2px;
+    color: #F5FAEF;
+    padding: 12px 24px;
+    transition: all 0.2s ease-in-out;
+}
+
+#home .pres .more a:hover {
+    translate: -2px -2px;
+}
+
+#home .pres .more a:active {
+    translate: 2px 2px;
+}
+
+@media screen and (max-width: 1080px) {
+    nav ul {
+        display: none; 
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background-color: #F5FAEF;
+        border-bottom: #13151520 solid 1px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav #menu {
+        display: block;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        padding: 12px;
+    }
+
+    #home .pres {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    #home{
+        padding: 24px;
+    }
+
+    #home .pres {
+        width: 100%;
+    }
+
+    #home .pres section{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #home .pres .reco .title img{
+        margin-right: 12px;
+    }
+
+    #home .pres .reco > span{
+        display: none;
+    }
+
+    #home .pres .reco .title p {
+        margin: 0;
+    }
+
+    #home .pres .reco .title span {
+        display: none;
+    }
+
+    #home .pres .more {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #home .pres .more .gotoAlbums {
+        margin-bottom: 12px;
+    }
+}
