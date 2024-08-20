@@ -282,6 +282,14 @@ nav ul li:active {
         display: none;
     }
 
+    #home .pres .reco > a{
+        display: none;
+    }
+
+    #home .pres .reco .title {
+        width: 100%;
+    }
+
     #home .pres .reco .title img {
         margin-right: 12px;
     }
@@ -290,7 +298,8 @@ nav ul li:active {
         display: none;
     }
 
-    #home .pres .reco .title p {
+    #home .pres .reco .artist {
+        text-align: right;
         margin: 0;
     }
 
