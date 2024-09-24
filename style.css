@@ -164,6 +164,7 @@ nav ul li:active {
 
 #home .pres .reco > span {
     font-family: 'Source Code Pro';
+    text-align: center;
     color: #131515;
     width: 5%;
 }
@@ -181,7 +182,7 @@ nav ul li:active {
     margin-right: 24px;
 }
 
-#home .pres .reco .title p {
+#home .pres .reco .title .name {
     text-transform: uppercase;
     font-weight: 600;
     margin-right: 6px;
@@ -203,6 +204,7 @@ nav ul li:active {
     width: 5%;
     text-align: right;
     color: #131515;
+    text-align: center;
 }
 
 #home .pres .more {
@@ -316,4 +318,20 @@ nav ul li:active {
     #home .pres .more .gotoAlbums {
         margin-bottom: 12px;
     }
+}
+
+@media screen and (max-width: 400px) {
+
+    #home .pres .reco{
+        display: block;
+    }
+
+    #home .pres .reco .title .name{
+        font-size: 1rem;
+    }
+
+    #home .pres .reco .artist p{
+        display: none;
+    }
+
 }
